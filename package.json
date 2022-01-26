@@ -1,5 +1,5 @@
 {
-  "name": "hw-app-pokt",
+  "name": "hw-app-hash",
   "version": "0.0.0",
   "description": "Ledger Hardware Wallet Pokt Application API",
   "keywords": [
@@ -12,12 +12,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/obsidiansystems/hw-app-pokt.git"
+    "url": "git+https://github.com/obsidiansystems/hw-app-hash.git"
   },
   "bugs": {
-    "url": "https://github.com/obsidiansystems/hw-app-pokt/issues"
+    "url": "https://github.com/obsidiansystems/hw-app-hash/issues"
   },
-  "homepage": "https://github.com/obsidiansystems/hw-app-pokt#readme",
+  "homepage": "https://github.com/obsidiansystems/hw-app-hash#readme",
   "publishConfig": {
     "access": "public"
   },

@@ -23,7 +23,7 @@ export { GetPublicKeyResult, SignTransactionResult, GetVersionResult };
  * Pokt API
  *
  * @example
- * import Pokt from "hw-app-pokt";
+ * import Pokt from "hw-app-hash";
  * const pokt = new Pokt(transport)
  */
 

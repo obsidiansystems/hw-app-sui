@@ -1,6 +1,6 @@
-# hw-app-pokt
+# hw-app-hash
 
-Ledger Hardware Wallet Pokt JavaScript bindings.
+Ledger Hardware Wallet HASH token (Provenance) JavaScript bindings.
 
 ## API
 

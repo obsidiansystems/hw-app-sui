@@ -1,20 +1,20 @@
-const Pokt = require("hw-app-pkt").default;
+const Provenance = require("hw-app-hash").default;
 const SpeculosTransport = require("@ledgerhq/hw-transport-node-speculos").default;
 
 async function main() {
   const apduPort = 8000;
   const transport = await SpeculosTransport.open({ apduPort });
-  const pokt = new Pokt(transport);
+  const provenance = new Provenance(transport);
 
   //console.log("menu");
-  //pokt.menu();
+  //provenance.menu();
 
   // console.log("getPublicKey");
-  // const pk = await pokt.getPublicKey("0");
+  // const pk = await provenance.getPublicKey("0");
   // console.log(pk);
 
   console.log("signTransaction");
-  const result = await pokt.signTransaction("0", "0123456789abcdef");
+  const result = await provenance.signTransaction("0", "0123456789abcdef");
   console.log(result);
 
   process.exit()

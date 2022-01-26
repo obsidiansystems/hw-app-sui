@@ -20,17 +20,17 @@ import { Common, GetPublicKeyResult, SignTransactionResult, GetVersionResult } f
 export { GetPublicKeyResult, SignTransactionResult, GetVersionResult };
 
 /**
- * Pokt API
+ * Provenance API
  *
  * @example
- * import Pokt from "hw-app-hash";
- * const pokt = new Pokt(transport)
+ * import Provenance from "hw-app-hash";
+ * const provenance = new Provenance(transport)
  */
 
-export default class Pokt extends Common {
+export default class Provenance extends Common {
   
   constructor(transport: Transport) {
-    super(transport, "PKT");
+    super(transport, "HASH");
   }
 }
 

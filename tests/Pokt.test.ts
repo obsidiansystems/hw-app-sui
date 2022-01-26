@@ -2,10 +2,10 @@ import {
   openTransportReplayer,
   RecordStore,
 } from "@ledgerhq/hw-transport-mocker";
-import Pokt from "../src/Pokt";
+import Provenance from "../src/Provenance";
 
-test("Pokt init", async () => {
+test("Provenance init", async () => {
   const transport = await openTransportReplayer(RecordStore.fromString(""));
-  const pkt = new Pokt(transport);
+  const pkt = new Provenance(transport);
   expect(pkt).not.toBe(undefined);
 });

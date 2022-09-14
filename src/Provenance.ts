@@ -31,6 +31,7 @@ export default class Provenance extends Common {
   
   constructor(transport: Transport) {
     super(transport, "HASH");
+    this.sendChunks = this.sendWithBlocks;
   }
 }
 

@@ -15,14 +15,14 @@ const Sui = require("hw-app-sui").default;
 
 const getPublicKey = async () => {
   const sui = new Sui(await Transport.create());
-  return await sui.getPublicKey("44'/535348'/0'/0/0");
+  return await sui.getPublicKey("44'/784'/0'/0/0");
 };
 
 const signTransaction = async () => {
   const transport = await Transport.create();
   const sui = new Sui(await Transport.create());
   return await sui.signTransaction(
-    "44'/535348'/0'/0/0",
+    "44'/784'/0'/0/0",
     "<transaction contents>"
   );
 };
@@ -83,7 +83,7 @@ Get Sui address for a given BIP-32 path.
 #### Examples
 
 ```javascript
-const publicKey = await sui.getPublicKey("44'/535348'/0'/0/0");
+const publicKey = await sui.getPublicKey("44'/784'/0'/0/0");
 ```
 
 Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>** an object with a public key.
@@ -101,7 +101,7 @@ Sign a transaction with a given BIP-32 path.
 
 ```javascript
 const publicKey = await sui.signTransaction(
-  "44'/535348'/0'/0/0",
+  "44'/784'/0'/0/0",
   "<transaction contents>"
   );
 ```

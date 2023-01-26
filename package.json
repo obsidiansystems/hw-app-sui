@@ -1,32 +1,32 @@
 {
-  "name": "hw-app-hash",
+  "name": "hw-app-sui",
   "version": "0.0.0",
-  "description": "Ledger Hardware Wallet Provenance Application API",
+  "description": "Ledger Hardware Wallet Sui Application API",
   "keywords": [
     "Ledger",
     "LedgerWallet",
-    "Provenance",
+    "Sui",
     "NanoS",
     "Blue",
     "Hardware Wallet"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/obsidiansystems/hw-app-hash.git"
+    "url": "git+https://github.com/obsidiansystems/hw-app-sui.git"
   },
   "bugs": {
-    "url": "https://github.com/obsidiansystems/hw-app-hash/issues"
+    "url": "https://github.com/obsidiansystems/hw-app-sui/issues"
   },
-  "homepage": "https://github.com/obsidiansystems/hw-app-hash#readme",
+  "homepage": "https://github.com/obsidiansystems/hw-app-sui#readme",
   "publishConfig": {
     "access": "public"
   },
-  "main": "lib/Provenance.js",
+  "main": "lib/Sui.js",
   "bin": {
-    "provenance-cli": "main.js"
+    "sui-cli": "main.js"
   },
-  "module": "lib-es/Provenance.js",
-  "types": "lib/Provenance.d.ts",
+  "module": "lib-es/Sui.js",
+  "types": "lib/Sui.d.ts",
   "license": "Apache-2.0",
   "dependencies": {
     "@ledgerhq/hw-transport": "^6.3.0",

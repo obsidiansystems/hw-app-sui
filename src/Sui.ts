@@ -20,17 +20,17 @@ import { Common, GetPublicKeyResult, SignTransactionResult, GetVersionResult } f
 export { GetPublicKeyResult, SignTransactionResult, GetVersionResult };
 
 /**
- * Provenance API
+ * Sui API
  *
  * @example
- * import Provenance from "hw-app-hash";
- * const provenance = new Provenance(transport)
+ * import Sui from "hw-app-sui";
+ * const sui = new Sui(transport)
  */
 
-export default class Provenance extends Common {
+export default class Sui extends Common {
   
   constructor(transport: Transport) {
-    super(transport, "HASH");
+    super(transport, "SUI");
     this.sendChunks = this.sendWithBlocks;
   }
 }

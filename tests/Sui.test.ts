@@ -2,10 +2,10 @@ import {
   openTransportReplayer,
   RecordStore,
 } from "@ledgerhq/hw-transport-mocker";
-import Provenance from "../src/Provenance";
+import Sui from "../src/Sui";
 
-test("Provenance init", async () => {
+test("Sui init", async () => {
   const transport = await openTransportReplayer(RecordStore.fromString(""));
-  const pkt = new Provenance(transport);
+  const pkt = new Sui(transport);
   expect(pkt).not.toBe(undefined);
 });

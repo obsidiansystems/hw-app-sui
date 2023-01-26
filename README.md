@@ -1,27 +1,27 @@
 [Github](https://github.com/LedgerHQ/ledgerjs/),
 [Ledger OP3N Discord](https://discord.gg/hTy7ZXvR7y)
 
-# hw-app-hash
+# hw-app-sui
 
-[Ledger Hardware Wallet](https://www.ledger.com/) JavaScript bindings for [Provenance](https://www.provenance.io/), based on [LedgerJS](https://github.com/LedgerHQ/ledgerjs).
+[Ledger Hardware Wallet](https://www.ledger.com/) JavaScript bindings for [Sui](https://sui.io/), based on [LedgerJS](https://github.com/LedgerHQ/ledgerjs).
 
-## Using LedgerJS for Provenance
+## Using LedgerJS for Sui
 
 Here is a sample app for Node:
 
 ```javascript
 const Transport = require("@ledgerhq/hw-transport").default;
-const Provenance = require("hw-app-hash_token").default;
+const Sui = require("hw-app-sui").default;
 
 const getPublicKey = async () => {
-  const hash_token = new Provenance(await Transport.create());
-  return await hash_token.getPublicKey("44'/535348'/0'/0/0");
+  const sui = new Sui(await Transport.create());
+  return await sui.getPublicKey("44'/535348'/0'/0/0");
 };
 
 const signTransaction = async () => {
   const transport = await Transport.create();
-  const hash_token = new Provenance(await Transport.create());
-  return await hash_token.signTransaction(
+  const sui = new Sui(await Transport.create());
+  return await sui.signTransaction(
     "44'/535348'/0'/0/0",
     "<transaction contents>"
   );
@@ -29,8 +29,8 @@ const signTransaction = async () => {
 
 const getVersion = async () => {
   const transport = await Transport.create();
-  const hash_token = new Provenance(await Transport.create());
-  return await hash_token.getVersion();
+  const sui = new Sui(await Transport.create());
+  return await sui.getVersion();
 };
 
 const doAll = async () => {
@@ -46,7 +46,7 @@ doAll().catch(err => console.log(err));
 
 ### Table of Contents
 
--   [Provenance](#hash_token)
+-   [Sui](#sui)
     -   [Parameters](#parameters)
     -   [Examples](#examples)
     -   [getPublicKey](#getpublickey)
@@ -63,18 +63,18 @@ doAll().catch(err => console.log(err));
 ### Parameters
 
 -   `transport` **`Transport<any>`**
--   `scrambleKey` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**  (optional, default `"Provenance"`)
+-   `scrambleKey` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)**  (optional, default `"Sui"`)
 
 ### Examples
 
 ```javascript
-import Provenance from "hw-app-hash_token";
-const hash_token = new Provenance(transport);
+import Sui from "hw-app-sui";
+const sui = new Sui(transport);
 ```
 
 ### getPublicKey
 
-Get Provenance address for a given BIP-32 path.
+Get Sui address for a given BIP-32 path.
 
 #### Parameters
 
@@ -83,7 +83,7 @@ Get Provenance address for a given BIP-32 path.
 #### Examples
 
 ```javascript
-const publicKey = await hash_token.getPublicKey("44'/535348'/0'/0/0");
+const publicKey = await sui.getPublicKey("44'/535348'/0'/0/0");
 ```
 
 Returns **[Promise](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise)&lt;[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)>** an object with a public key.
@@ -100,7 +100,7 @@ Sign a transaction with a given BIP-32 path.
 #### Examples
 
 ```javascript
-const publicKey = await hash_token.signTransaction(
+const publicKey = await sui.signTransaction(
   "44'/535348'/0'/0/0",
   "<transaction contents>"
   );
@@ -115,7 +115,7 @@ Get the version of the application installed on the hardware device.
 #### Examples
 
 ```javascript
-console.log(await hash_token.getVersion());
+console.log(await sui.getVersion());
 ```
 
 for version 0.1.0, it produces something like

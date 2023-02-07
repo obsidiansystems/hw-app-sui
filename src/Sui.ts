@@ -15,8 +15,8 @@
  *  limitations under the License.
  ********************************************************************************/
 import type Transport from "@ledgerhq/hw-transport";
-import { Common } from "hw-app-obsidian-common";
-import type { SignTransactionResult, GetVersionResult } from "hw-app-obsidian-common";
+import { Common } from "hw-app-alamgu";
+import type { SignTransactionResult, GetVersionResult } from "hw-app-alamgu";
 
 export type { SignTransactionResult, GetVersionResult };
 

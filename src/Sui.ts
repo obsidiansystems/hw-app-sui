@@ -15,9 +15,15 @@
  *  limitations under the License.
  ********************************************************************************/
 import type Transport from "@ledgerhq/hw-transport";
-import { Common, GetPublicKeyResult, SignTransactionResult, GetVersionResult } from "hw-app-obsidian-common";
+import { Common } from "hw-app-obsidian-common";
+import type { SignTransactionResult, GetVersionResult } from "hw-app-obsidian-common";
 
-export { GetPublicKeyResult, SignTransactionResult, GetVersionResult };
+export type { SignTransactionResult, GetVersionResult };
+
+export type GetPublicKeyResult = {
+  publicKey: Uint8Array;
+  address: Uint8Array;
+};
 
 /**
  * Sui API
@@ -32,6 +38,22 @@ export default class Sui extends Common {
   constructor(transport: Transport) {
     super(transport, "SUI");
     this.sendChunks = this.sendWithBlocks;
+  }
+
+  /**
+    * Retrieves the public key associated with a particular BIP32 path from the ledger
+app.
+    *
+    * @param path - the path to retrieve.
+    */
+  override async getPublicKey(
+    path: string,
+  ): Promise<GetPublicKeyResult> {
+    const { publicKey, address } = await super.getPublicKey(path);
+    if (address == null) {
+      throw "should never happen, app always returns address";
+    }
+    return { publicKey, address };
   }
 }
 

@@ -1,6 +1,14 @@
 [Github](https://github.com/LedgerHQ/ledgerjs/),
 [Ledger OP3N Discord](https://discord.gg/hTy7ZXvR7y)
 
+# Deprecated
+
+Please use `ledgerjs-hw-app-sui` [from NPM](https://www.npmjs.com/package/@mysten/ledgerjs-hw-app-sui) or [from the SUI monorepo](https://github.com/MystenLabs/sui/tree/main/sdk/ledgerjs-hw-app-sui) instead.
+
+That is the new home for this code.
+
+-----
+
 # hw-app-sui
 
 [Ledger Hardware Wallet](https://www.ledger.com/) JavaScript bindings for [Sui](https://sui.io/), based on [LedgerJS](https://github.com/LedgerHQ/ledgerjs).
